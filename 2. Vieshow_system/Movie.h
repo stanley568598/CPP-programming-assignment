@@ -25,6 +25,6 @@ private:
 	bool dates[4]; // dates[i] is true if and only if the movie is offered on i-th date
 	bool sessionTimes[17];
 	bool occupiedSeats[4][17][8][12]; // occupiedSeats[i][j] is the occupied Seats for all accounts
-};                                           // at j-th session time on i-th date
+};                                    // at j-th session time on i-th date
 
 #endif

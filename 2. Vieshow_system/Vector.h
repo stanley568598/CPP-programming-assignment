@@ -59,7 +59,7 @@ private:
 }; // end class template VecIterator
 
 
-   // vector class template definition
+// vector class template definition
 template< typename T >
 class vector
 {
@@ -115,7 +115,7 @@ private:
 }; // end class template vector
 
 
-   // Default constructor
+// Default constructor
 template< typename T >
 vector< T >::vector()
 {
@@ -129,7 +129,7 @@ vector< T >::vector(const vector< T > &x)
 	*this = x;
 } // end vector copy constructor
 
-  // destructor; destroys the vector
+// destructor; destroys the vector
 template< typename T >
 vector< T >::~vector()
 {
@@ -137,15 +137,14 @@ vector< T >::~vector()
 		delete[] myFirst;
 } // end destructor
 
-  // overloaded assignment operator;
-  // const return avoids: ( a1 = a2 ) = a3
+// overloaded assignment operator;
 template< typename T >
 const vector< T >& vector< T >::operator=(const vector< T > &x)
 {
 	myFirst = new T();
 	for (int i = 0; i < x.size(); i++)
 		push_back(x[i]);
-	return *this;
+	return *this;           // const return avoids: ( a1 = a2 ) = a3
 } // end function operator=
 
 template< typename T >

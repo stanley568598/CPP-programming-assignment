@@ -84,6 +84,8 @@ void MovieDatabase::saveMovies()
 		exit(1);
 	}
 	for (int i = 0; i < movies.size(); i++)
-		outMovieFile.write(reinterpret_cast<const char *>(&movies[i]), sizeof(Movie));
+    {
+        outMovieFile.write(reinterpret_cast<const char *>(&movies[i]), sizeof(Movie));
+    }
 	outMovieFile.close();
 }
