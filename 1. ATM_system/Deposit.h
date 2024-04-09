@@ -18,9 +18,9 @@ private:
 //	vector< Account > &accounts = vector< Account >(); // 不可這樣寫，在constructor時，無法改變目標 !!!
 	double amount; // amount to deposit
 
-				   // get pointer to Account object in "accounts" whose account number is equal to "accountNumber"
+	// get pointer to Account object in "accounts" whose account number is equal to "accountNumber"
 	Account * getAccount(int accountNumber, vector< Account > &accounts);
 	double promptForDepositAmount() const; // prompt user to enter a deposit amount in cents 
-}; // end class Deposit
+};
 
 #endif // DEPOSIT_H

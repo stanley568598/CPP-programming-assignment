@@ -16,7 +16,8 @@ void BalanceInquiry::execute() // perform the balance inquiry transaction
 	cout << endl;
 }
 
-Account * BalanceInquiry::getAccount(int accountNumber, vector< Account > &accounts)// get pointer to Account object in "accounts" whose account number is equal to "accountNumber"
+// get pointer to Account object in "accounts" whose account number is equal to "accountNumber"
+Account * BalanceInquiry::getAccount(int accountNumber, vector< Account > &accounts)
 {
 	for (size_t i = 0; i < accounts.size(); i++)
 	{

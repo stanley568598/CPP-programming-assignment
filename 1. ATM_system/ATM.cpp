@@ -19,22 +19,22 @@ void performTransactions(int &currentAccountNumber, vector< Account > &accounts)
 
 int displayMainMenu(); // display the main menu and return an input selection
 
-					   // start ATM 
-int main()
+int main()		        // start ATM 
 {
 	bool userAuthenticated = false; // whether user is authenticated
-	int currentAccountNumber = 0; // current user's account number
+	int currentAccountNumber = 0;   // current user's account number
 
-								  // create two Account objects for testing
+	// create two Account objects for testing
 	Account account1(12345, 54321, 1000.0, 1200.0);
 	Account account2(98765, 56789, 200.0, 200.0);
 
 	vector< Account > accounts; // vector of the bank's Accounts
-								// add the Account objects to the vector accounts
+	
+    // add the Account objects to the vector accounts
 	accounts.push_back(account1); // add account1 to end of vector
 	accounts.push_back(account2); // add account2 to end of vector
 
-								  // welcome and authenticate user; perform transactions
+	// welcome and authenticate user; perform transactions
 	while (true)
 	{
 		// loop while user is not yet authenticated
@@ -44,16 +44,16 @@ int main()
 			authenticateUser(userAuthenticated, currentAccountNumber, accounts); // authenticate user
 		} // end while
 
-		  // display the main menu and perform transactions
+		// display the main menu and perform transactions
 		performTransactions(currentAccountNumber, accounts);
 
 		userAuthenticated = false; // reset before next ATM session
 		currentAccountNumber = 0; // reset before next ATM session 
 		cout << "\nThank you! Goodbye!" << endl << endl;
-	} // end while   
-} // end function main
+	} 
+}
 
-  // attempt to authenticate user against database
+// attempt to authenticate user against database
 void authenticateUser(bool &userAuthenticated, int &currentAccountNumber, vector< Account > &accounts)
 {
 	cout << "\nPlease enter your account number: ";
@@ -77,9 +77,9 @@ void authenticateUser(bool &userAuthenticated, int &currentAccountNumber, vector
 		currentAccountNumber = accountNumber; // save user's account #
 	else
 		cout << "Invalid account number or PIN. Please try again.\n\n";
-} // end function authenticateUser
+}
 
-  // retrieve Account object containing specified account number
+// retrieve Account object containing specified account number
 Account * getAccount(int accountNumber, vector< Account > &accounts)
 {
 	// loop through accounts searching for matching account number
@@ -88,12 +88,12 @@ Account * getAccount(int accountNumber, vector< Account > &accounts)
 		// return current account if match found
 		if (accounts[i].getAccountNumber() == accountNumber)
 			return &accounts[i];
-	} // end for
+	}
 
 	return NULL; // if no matching account was found, return NULL
-} // end function getAccount
+}
 
-  // display the main menu and perform transactions
+// display the main menu and perform transactions
 void performTransactions(int &currentAccountNumber, vector< Account > &accounts)
 {
 	// enumeration constants represent main menu options
@@ -105,10 +105,9 @@ void performTransactions(int &currentAccountNumber, vector< Account > &accounts)
 	static const int INITIAL_REMAINING_BILLS = 500;
 	int remainingBills = INITIAL_REMAINING_BILLS;
 
-	bool userExited = false; // user has not chosen to exit
+	bool userExited = false;    // user has not chosen to exit
 
-							 // loop while user has not chosen option to exit system
-	while (!userExited)
+	while (!userExited)         // loop while user has not chosen option to exit system
 	{
 		// show main menu and get user selection
 		int mainMenuSelection = displayMainMenu();
@@ -143,10 +142,10 @@ void performTransactions(int &currentAccountNumber, vector< Account > &accounts)
 			cout << "\nYou did not enter a valid selection. Try again." << endl << endl;
 			break;
 		} // end switch
-	} // end while
-} // end function performTransactions
+	}
+}
 
-  // display the main menu and return an input selection
+// display the main menu and return an input selection
 int displayMainMenu()
 {
 	cout << "Main menu:" << endl;
@@ -158,4 +157,4 @@ int displayMainMenu()
 	int choice;
 	cin >> choice;
 	return choice; // return user's selection
-} // end function displayMainMenu
+}

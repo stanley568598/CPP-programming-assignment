@@ -16,8 +16,8 @@ private:
 	int accountNumber; // indicates account involved
 	vector< Account > &accounts; // reference to the vector of the bank's Accounts
 
-								 // get pointer to Account object in "accounts" whose account number is equal to "accountNumber"
+	// get pointer to Account object in "accounts" whose account number is equal to "accountNumber"
 	Account * getAccount(int accountNumber, vector< Account > &accounts);
-}; // end class BalanceInquiry
+};
 
 #endif // BALANCE_INQUIRY_H

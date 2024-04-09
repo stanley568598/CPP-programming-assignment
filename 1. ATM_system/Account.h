@@ -6,8 +6,7 @@
 class Account
 {
 public:
-	Account(int theAccountNumber, int thePIN, double theAvailableBalance,
-		double theTotalBalance); // constructor sets attributes
+	Account(int theAccountNumber, int thePIN, double theAvailableBalance, double theTotalBalance); // constructor sets attributes
 	bool validatePIN(int userPIN) const; // is user-specified PIN correct?
 	double getAvailableBalance() const; // returns available balance
 	double getTotalBalance() const; // returns total balance

@@ -2,7 +2,7 @@
 #include<iostream>
 
 Withdrawal::Withdrawal(int userAccountNumber, vector< Account > &atmAccounts, int &atmRemainingBills)
-	:accounts(atmAccounts),remainingBills(atmRemainingBills)
+	:accounts(atmAccounts),remainingBills(atmRemainingBills) // 初始化類別成員
 {
 	accountNumber = userAccountNumber;
 }
@@ -54,14 +54,15 @@ void Withdrawal::execute() // perform the withdrawal transaction
 	}
 }
 
-Account * Withdrawal::getAccount(int accountNumber, vector< Account > &accounts)// get pointer to Account object in "accounts" whose account number is equal to "accountNumber"
+// get pointer to Account object in "accounts" whose account number is equal to "accountNumber"
+Account * Withdrawal::getAccount(int accountNumber, vector< Account > &accounts)
 {
 	for (size_t i = 0; i < accounts.size(); i++)
 	{
 		// return current account if match found
 		if (accounts[i].getAccountNumber() == accountNumber)
 			return &accounts[i];
-	} // end for
+	}
 
 	return NULL; // if no matching account was found, return NULL
 }

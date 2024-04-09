@@ -3,8 +3,7 @@
 #include<iomanip>
 #include<math.h>
 
-Deposit::Deposit(int userAccountNumber, vector< Account > &atmAccounts)
-	: accounts(atmAccounts)
+Deposit::Deposit(int userAccountNumber, vector< Account > &atmAccounts) : accounts(atmAccounts) // 初始化類別成員
 {
 	accountNumber = userAccountNumber;
 //	accounts = atmAccounts;// 不可這樣寫，參考值需要在被宣告時就確定指向，在constructor時，無法改變目標 !!!
