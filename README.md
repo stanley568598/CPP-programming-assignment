@@ -1,6 +1,8 @@
 # Cpp-programming-assignment
 
 > These are assignments programming with Cpp.
+> 
+> For more details, please enter the project and read the respective README.md file.
 
 ## [1. ATM_system：簡化版的電子帳簿系統](./1.%20ATM_system)
 
