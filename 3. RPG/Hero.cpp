@@ -94,15 +94,15 @@ void Hero::choice(int* c)
 		c[0] = get_x();
 		c[1] = get_y() - 1;
 		break;
-	case's':
+	case 's':
 		c[0] = get_x();
 		c[1] = get_y() + 1;
 		break;
-	case'a':
+	case 'a':
 		c[0] = get_x() - 1;
 		c[1] = this->get_y();
 		break;
-	case'd':
+	case 'd':
 		c[0] = get_x() + 1;
 		c[1] = this->get_y();
 		break;
