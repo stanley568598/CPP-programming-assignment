@@ -27,10 +27,17 @@
 ## Demo
 
 1. Login & View
+
     ![Login & View](./assets/images/1.%20Login%20&%20View.JPG)
+
 2. Withdraw
+
     ![Withdraw](./assets/images/2.%20Withdraw.JPG)
+
 3. Deposit
+
     ![Deposit](./assets/images/3.%20Deposit.JPG)
+
 4. Exit
+
     ![Exit](./assets/images/4.%20Exit.JPG)

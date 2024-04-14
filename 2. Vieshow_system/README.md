@@ -27,13 +27,23 @@
 ## Demo
 
 1. Sign In & Show Account Information
+
     ![Sign In & Show Account Information](./assets/images/1.%20Sign%20In%20&%20Show%20Account%20Information.JPG)
+
 2. My Bookings 
+
     ![My Bookings](./assets/images/2.%20My%20Bookings.JPG)
+
 3. Buy Tickets
+
     ![Buy Tickets](./assets/images/3.%20Buy%20Tickets_1.JPG)
+
     ![Buy Tickets](./assets/images/3.%20Buy%20Tickets_2.JPG)
+
     ![Buy Tickets](./assets/images/3.%20Buy%20Tickets_3.JPG)
+
     ![Buy Tickets](./assets/images/3.%20Buy%20Tickets_4.JPG)
+
 4. Sign out
+
     ![Sign out](./assets/images/4.%20Sign%20out.JPG)
